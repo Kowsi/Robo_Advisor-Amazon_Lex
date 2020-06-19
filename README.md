@@ -74,13 +74,13 @@ The `riskLevel` custom slot will be used to retrieve the risk level the user is 
 
 Configure the response cards for the `riskLevel` slot as is shown bellow:
 
-| Card 1                              | Card 2                              |
+| Card 1                              | Card 3                              |
 | ----------------------------------- | ----------------------------------- |
-| ![Card 1 sample](Images/card1.png)  | ![Card 2 sample](Images/card2.png)  |
+| <img src="Images/card1.png" width="300" /> | <img src="Images/card3.png" width="300" />  |
 
-| Card 3                              | Card 4                              |
+| Card 2                              | Card 4                              |
 | ----------------------------------- | ----------------------------------- |
-| ![Card 3 sample](Images/card3.png)  | ![Card 4 sample](Images/card4.png)  |
+| <img src="Images/card2.png" width="300" />   | <img src="Images/card4.png" width="300" />   |
 
 **Note:** You can download free icons from [this website](https://www.iconfinder.com/) or you can use the icons provided in the [`Icons` directory](Icons/).
 
@@ -127,4 +127,4 @@ Once finish coding lambda function, test it using the [sample test cases](RoboAd
 
 After successfully testing your code, open the Amazon Lex Console and navigate to the `RecommendPortfolio` bot configuration, integrate new lambda function by selecting it in the _Lambda initialization and validation_ and _Fulfillment_ sections. Build the bot, and we should be able to have conversation as follows.
 
-![Robo Advisor test with Lambda](Images/demo_robo_advisor.gif)
+<img src="Images/demo_robo_advisor.gif" width="300" height='700'/> 
