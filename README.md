@@ -46,7 +46,7 @@ In this section, We create the `RoboAdvisor` bot and add an intent with its corr
     * **Sentiment analysis:** No
     * **COPPA**: No
 
-2. **Create intent** : Create the `RecommendPortfolio` intent, and configure some sample utterances as follows (you can add more utterances at your own criteria):
+2. **Create Intent** : Create the `RecommendPortfolio` intent, and configure some sample utterances as follows (you can add more utterances at your own criteria):
 
     * I want to save money for my retirement
     * I'm ​`{age}​` and I would like to invest for my retirement
@@ -65,7 +65,7 @@ In this section, We create the `RoboAdvisor` bot and add an intent with its corr
     | age              | AMAZON.NUMBER        | How old are you?                                                          |
     | investmentAmount | AMAZON.NUMBER        | How much do you want to invest?                                           |
 
-4. **Create the custom Slot** : The `riskLevel` custom slot will be used to retrieve the risk level the user is willing to take on the investment portfolio; create this custom slot as follows:
+4. **Create the Custom Slot** : The `riskLevel` custom slot will be used to retrieve the risk level the user is willing to take on the investment portfolio; create this custom slot as follows:
 
     * **Name:** riskLevel
     * **Prompt:** What level of investment risk would you like to take?
@@ -99,18 +99,18 @@ Build the bot and test it in the chatbot window.
 
 #### Enhance the Robo Advisor with an Amazon Lambda Function
 
-In this section, Create an Amazon Lambda function that will validate the data provided by the user on the Robo Advisor. Start by creating a new lambda function from scratch and name it `recommendPortfolio`. Select Python 3.7 as runtime.
+Create an Amazon Lambda function that will validate the data provided by the user on the Robo Advisor. Start by creating a new lambda function from scratch and name it `recommendPortfolio`. Select Python 3.7 as runtime.
 
-Code provided on [lambda_function.py](RoboAdvisor/lambda_function.py)
+Code available on [lambda_function.py](RoboAdvisor/lambda_function.py)
 
 The `recommend_portfolio()` function follows these guidelines:
 
-1. User Input Validation
+1. **User Input Validation**
 
     * The `age` should be greater than zero and less than 65.
     * the `investment_amount` should be equal to or greater than 5000.
 
-2. Investment Portfolio Recommendation
+2. **Investment Portfolio Recommendation**
     - Once the intent is fulfilled, the bot should response with an investment recommendation based on the selected risk level as follows:
 
     * **none:** "100% bonds (AGG), 0% equities (SPY)"
@@ -120,18 +120,23 @@ The `recommend_portfolio()` function follows these guidelines:
     * **high:** "20% bonds (AGG), 80% equities (SPY)"
     * **very high:** "0% bonds (AGG), 100% equities (SPY)"
 
-3. Test Case 
+3. **Test Case** 
     - Once finish coding lambda function, test it using the [sample test cases](RoboAdvisor/Test_Cases/).
 
     - After successfully testing your code, open the Amazon Lex Console and navigate to the `RecommendPortfolio` bot configuration, integrate new lambda function by selecting it in the _Lambda initialization and validation_ and _Fulfillment_ sections. Build the bot, and we should be able to have conversation as follows.
 
-#### Demo
+---
+
+### Demo
 
 <img src="Images/demo_robo_advisor.gif" width="300" height='600'/> 
 
+---
 
-#### Integrating an Amazon Lex Bot with Slack
+### Integrating an Amazon Lex Bot with Slack
 
 Finally we are ready to integrate our Bot with Slack. Follow the guildlines in the link [Integration with Slack](https://docs.aws.amazon.com/lex/latest/dg/slack-bot-association.html)
 
-<img src="Images/Slack_Bot_integration.gif" width="300" height='600'/> 
+<img src="Images/Slack_Bot_integration.gif" width="500" height='600'/> 
+
+---
