@@ -25,10 +25,10 @@ Main Task:
 ### Files
 
 * [lambda_function.py](RoboAdvisor/lambda_function.py)
-* [correct_dialog.txt](RoboAdvisor/Test_Cases/correct_dialog.txt)
-* [age_error.txt](RoboAdvisor/Test_Cases/age_error.txt)
-* [incorrect_amount_error.txt](RoboAdvisor/Test_Cases/incorrect_amount_error.txt)
-* [negative_age_error.txt](RoboAdvisor/Test_Cases/negative_age_error.txt)
+* [correct_dialog.txt](RoboAdvisor/Test%20Case/correct_dialog.txt)
+* [age_error.txt](RoboAdvisor/Test%20Case/age_error.txt)
+* [incorrect_amount_error.txt](RoboAdvisor/Test%20Case/incorrect_amount_error.txt)
+* [negative_age_error.txt](RoboAdvisor/Test%20Case/negative_age_error.txt)
 
 ---
 
@@ -121,7 +121,7 @@ The `recommend_portfolio()` function follows these guidelines:
     * **very high:** "0% bonds (AGG), 100% equities (SPY)"
 
 3. **Test Case** 
-    - Once finish coding lambda function, test it using the [sample test cases](RoboAdvisor/Test_Cases/).
+    - Once finish coding lambda function, test it using the [sample test cases](RoboAdvisor/Test%20Case/).
 
     - After successfully testing your code, open the Amazon Lex Console and navigate to the `RecommendPortfolio` bot configuration, integrate new lambda function by selecting it in the _Lambda initialization and validation_ and _Fulfillment_ sections. Build the bot, and we should be able to have conversation as follows.
 
